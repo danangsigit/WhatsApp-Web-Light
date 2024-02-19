@@ -39,6 +39,7 @@ public class UserController {
 
     @PostMapping("/update")
     public UserResponseDTO update (@RequestBody @Valid UserRequestUpdateDTO userRequestUpdateDTO) {
+        // Nome do usuario logado
         String user_name = "Vítor";
         return userService.update(user_name, userRequestUpdateDTO);
     }
