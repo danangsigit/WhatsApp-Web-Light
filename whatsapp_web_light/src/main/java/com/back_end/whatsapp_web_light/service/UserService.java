@@ -25,5 +25,16 @@ public class UserService {
         }
         return null;
     }
+    
+    public UserResponseDTO findByName (String name) {
+        UserResponseDTO userResponseDTO = new UserResponseDTO();
+        UserEntity user = userRepository.findByName(name);
+
+        if (user != null) {
+            BeanUtils.copyProperties(user, userResponseDTO);
+            return userResponseDTO;
+        }
+        return null;
+    }
 
 }

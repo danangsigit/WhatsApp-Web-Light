@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.back_end.whatsapp_web_light.entity.UserEntity;
 
-//@Repository
+@Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
-    
+    UserEntity findByName(String name);
 }
