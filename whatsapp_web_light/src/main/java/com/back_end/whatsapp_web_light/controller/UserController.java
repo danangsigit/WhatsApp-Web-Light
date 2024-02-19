@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.back_end.whatsapp_web_light.dto.request.UserRequestDTO;
+import com.back_end.whatsapp_web_light.dto.request.UserRequestUpdateDTO;
 import com.back_end.whatsapp_web_light.dto.response.UserResponseDTO;
 import com.back_end.whatsapp_web_light.service.UserService;
 
@@ -25,8 +26,21 @@ public class UserController {
     public UserResponseDTO createUser (@RequestBody @Valid UserRequestDTO userRequestDTO) {
         return userService.createUser(userRequestDTO);
     }
+
     @GetMapping("/name/{name}")
     public UserResponseDTO findByName (@PathVariable String name) {
         return userService.findByName(name);
     }
+
+    @GetMapping("/id/{id}")
+    public UserResponseDTO findById (@PathVariable Long id) {
+        return userService.findById(id);
+    }
+
+    @PostMapping("/update")
+    public UserResponseDTO update (@RequestBody @Valid UserRequestUpdateDTO userRequestUpdateDTO) {
+        String user_name = "Vítor";
+        return userService.update(user_name, userRequestUpdateDTO);
+    }
+
 }
