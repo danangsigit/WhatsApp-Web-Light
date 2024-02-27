@@ -1,4 +1,4 @@
-# Repositório Back-End do projeto WhatsApp Web Light
+# WhatsApp Web Light
 
 <p>O WhatsApp Web Light é uma versão web e simplificada do WhatsApp.</p>
 
