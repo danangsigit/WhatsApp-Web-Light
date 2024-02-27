@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.back_end.whatsapp_web_light.dto.request.UserRequestDTO;
+import com.back_end.whatsapp_web_light.dto.request.UserRequestLoginDTO;
 import com.back_end.whatsapp_web_light.dto.request.UserRequestUpdateDTO;
+import com.back_end.whatsapp_web_light.dto.response.TokenResponseDTO;
 import com.back_end.whatsapp_web_light.dto.response.UserResponseDTO;
 import com.back_end.whatsapp_web_light.service.UserService;
 
@@ -41,8 +43,13 @@ public class UserController {
     @PutMapping("/update")
     public UserResponseDTO update (@RequestBody @Valid UserRequestUpdateDTO userRequestUpdateDTO) {
         // Nome do usuario logado
-        String user_name = "Vítor";
+        String user_name = "teste2";
         return userService.update(user_name, userRequestUpdateDTO);
+    }
+
+    @PostMapping("/login")
+    public TokenResponseDTO loginUser (@RequestBody @Valid UserRequestLoginDTO userRequesLogintDTO) {
+        return userService.login(userRequesLogintDTO);
     }
 
 }
