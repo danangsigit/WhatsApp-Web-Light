@@ -1,4 +1,4 @@
-package com.back_end.whatsapp_web_light.controller;
+package com.api.whatsapp_web_light.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.back_end.whatsapp_web_light.dto.request.UserRequestDTO;
-import com.back_end.whatsapp_web_light.dto.request.UserRequestLoginDTO;
-import com.back_end.whatsapp_web_light.dto.request.UserRequestUpdateDTO;
-import com.back_end.whatsapp_web_light.dto.response.TokenResponseDTO;
-import com.back_end.whatsapp_web_light.dto.response.UserResponseDTO;
-import com.back_end.whatsapp_web_light.service.TokenService;
-import com.back_end.whatsapp_web_light.service.UserService;
+import com.api.whatsapp_web_light.dto.request.user.UserRequestDTO;
+import com.api.whatsapp_web_light.dto.request.user.UserRequestLoginDTO;
+import com.api.whatsapp_web_light.dto.request.user.UserRequestUpdateDTO;
+import com.api.whatsapp_web_light.dto.response.user.TokenResponseDTO;
+import com.api.whatsapp_web_light.dto.response.user.UserResponseDTO;
+import com.api.whatsapp_web_light.service.user.TokenService;
+import com.api.whatsapp_web_light.service.user.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;

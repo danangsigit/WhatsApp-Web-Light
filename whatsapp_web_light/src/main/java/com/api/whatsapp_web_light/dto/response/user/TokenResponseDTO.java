@@ -1,4 +1,4 @@
-package com.back_end.whatsapp_web_light.dto.response;
+package com.api.whatsapp_web_light.dto.response.user;
 
 public class TokenResponseDTO {
     

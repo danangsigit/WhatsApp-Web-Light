@@ -1,4 +1,4 @@
-package com.back_end.whatsapp_web_light.service;
+package com.api.whatsapp_web_light.service.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.back_end.whatsapp_web_light.repository.UserRepository;
+import com.api.whatsapp_web_light.repository.user.UserRepository;
 
 @Service
 public class AuthorizationService implements UserDetailsService {

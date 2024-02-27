@@ -1,4 +1,4 @@
-package com.back_end.whatsapp_web_light;
+package com.api.whatsapp_web_light;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

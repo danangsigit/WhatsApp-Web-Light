@@ -1,4 +1,4 @@
-package com.back_end.whatsapp_web_light.entity;
+package com.api.whatsapp_web_light.entity.user;
 
 import java.util.Collection;
 import java.util.List;

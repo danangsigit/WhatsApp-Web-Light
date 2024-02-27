@@ -1,4 +1,4 @@
-package com.back_end.whatsapp_web_light.infra.security;
+package com.api.whatsapp_web_light.infra.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

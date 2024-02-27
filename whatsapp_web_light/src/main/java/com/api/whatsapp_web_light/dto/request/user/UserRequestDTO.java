@@ -1,14 +1,15 @@
-package com.back_end.whatsapp_web_light.dto.request;
+package com.api.whatsapp_web_light.dto.request.user;
 
 import jakarta.validation.constraints.NotBlank;
 
-public class UserRequestUpdateDTO {
+public class UserRequestDTO {
     
+    @NotBlank
+    private String name;
     @NotBlank
     private String password;
     @NotBlank
     private String email;
-    @NotBlank
     private String photo;
 
     public String getPhoto() {
@@ -34,5 +35,12 @@ public class UserRequestUpdateDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

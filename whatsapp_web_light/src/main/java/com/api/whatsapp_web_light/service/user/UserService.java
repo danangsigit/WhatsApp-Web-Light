@@ -1,12 +1,4 @@
-package com.back_end.whatsapp_web_light.service;
-
-import com.back_end.whatsapp_web_light.dto.request.UserRequestDTO;
-import com.back_end.whatsapp_web_light.dto.request.UserRequestLoginDTO;
-import com.back_end.whatsapp_web_light.dto.request.UserRequestUpdateDTO;
-import com.back_end.whatsapp_web_light.dto.response.TokenResponseDTO;
-import com.back_end.whatsapp_web_light.dto.response.UserResponseDTO;
-import com.back_end.whatsapp_web_light.entity.UserEntity;
-import com.back_end.whatsapp_web_light.repository.UserRepository;
+package com.api.whatsapp_web_light.service.user;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +6,14 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.api.whatsapp_web_light.dto.request.user.UserRequestDTO;
+import com.api.whatsapp_web_light.dto.request.user.UserRequestLoginDTO;
+import com.api.whatsapp_web_light.dto.request.user.UserRequestUpdateDTO;
+import com.api.whatsapp_web_light.dto.response.user.TokenResponseDTO;
+import com.api.whatsapp_web_light.dto.response.user.UserResponseDTO;
+import com.api.whatsapp_web_light.entity.user.UserEntity;
+import com.api.whatsapp_web_light.repository.user.UserRepository;
 
 @Service
 public class UserService {
