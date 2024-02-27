@@ -14,14 +14,19 @@ import com.back_end.whatsapp_web_light.dto.request.UserRequestLoginDTO;
 import com.back_end.whatsapp_web_light.dto.request.UserRequestUpdateDTO;
 import com.back_end.whatsapp_web_light.dto.response.TokenResponseDTO;
 import com.back_end.whatsapp_web_light.dto.response.UserResponseDTO;
+import com.back_end.whatsapp_web_light.service.TokenService;
 import com.back_end.whatsapp_web_light.service.UserService;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping(value="/user")
 public class UserController {
     
+    @Autowired
+    TokenService tokenService;
+
     @Autowired
     UserService userService;
 
@@ -41,9 +46,12 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public UserResponseDTO update (@RequestBody @Valid UserRequestUpdateDTO userRequestUpdateDTO) {
-        // Nome do usuario logado
-        String user_name = "teste2";
+    public UserResponseDTO update (HttpServletRequest request, @RequestBody @Valid UserRequestUpdateDTO userRequestUpdateDTO) {
+        
+        // Extraindo nome do usuario logado
+        var token = tokenService.recoverToken(request);
+        var user_name = tokenService.validateToken(token);
+    
         return userService.update(user_name, userRequestUpdateDTO);
     }
 

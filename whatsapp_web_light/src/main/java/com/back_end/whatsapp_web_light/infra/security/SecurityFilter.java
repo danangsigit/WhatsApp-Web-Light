@@ -28,7 +28,7 @@ public class SecurityFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws IOException, ServletException {
-        var token = this.recoverToken(request);
+        var token = tokenService.recoverToken(request);
         if (token != null) {
             var name = tokenService.validateToken(token);
             UserDetails user = userRepository.findByName(name);
@@ -38,10 +38,4 @@ public class SecurityFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private String recoverToken(HttpServletRequest request) {
-        var authHeader = request.getHeader("Authorization");
-        if(authHeader ==null) return null;
-        return authHeader.replace("Bearer ", "");
-    }
-    
 }

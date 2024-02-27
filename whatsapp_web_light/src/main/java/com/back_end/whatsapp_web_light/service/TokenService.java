@@ -13,6 +13,8 @@ import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.back_end.whatsapp_web_light.entity.UserEntity;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Service
 public class TokenService {
 
@@ -52,4 +54,11 @@ public class TokenService {
             return "";
         }
     }
+
+    public String recoverToken(HttpServletRequest request) {
+        var authHeader = request.getHeader("Authorization");
+        if(authHeader ==null) return null;
+        return authHeader.replace("Bearer ", "");
+    }
+    
 }
