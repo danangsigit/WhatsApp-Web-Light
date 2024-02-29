@@ -21,16 +21,16 @@ msg (id_msg PK, text, date_time, from_user FK, to_contact FK);
 
 ```
 CREATE TABLE users (
-    id_user SERIAL,
+    id_user BIGINT,
     name VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(16) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     photo VARCHAR(100),
     PRIMARY KEY(id_user)
 );
 
 CREATE TABLE contact (
-    id_contact SERIAL,
+    id_contact BIGINT,
     user_contact int NOT NULL,
     my_contact int NOT NULL,
     PRIMARY KEY(id_contact),
@@ -39,7 +39,7 @@ CREATE TABLE contact (
 );
 
 CREATE TABLE msg (
-    id_msg SERIAL,
+    id_msg BIGINT,
     text TEXT NOT NULL,
     date_time TIMESTAMP NOT NULL,
     from_user INT NOT NULL,
