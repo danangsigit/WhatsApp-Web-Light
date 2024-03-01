@@ -1,6 +1,7 @@
-# WhatsApp Web Light
+# REST API - WhatsApp Web Light
 
 <p>O WhatsApp Web Light é uma versão web e simplificada do WhatsApp.</p>
+<p>Este repositório disponibiliza os endpoints da aplicação e é responsável pela modelagem e os acessos ao banco de dados do sistema.</p>
 
 ## Modelagem do Banco de Dados
 ### Modelo ER
@@ -48,4 +49,71 @@ CREATE TABLE msg (
     FOREIGN KEY(from_user) REFERENCES users(id_user),
     FOREIGN KEY(to_contact) REFERENCES contact(id_contact) ON DELETE CASCADE
 );
+```
+
+## Endpoints da API
+<p>Todos os endpoints que tiverem com anotação ".PROTECTED" precisarão da utilização do TOKEN para o acesso.</p>
+<p>O TOKEN é gerado após o login do usuário.</p>
+
+**/user**
+### Criar usuário
+<p>Os campos (name, password e email) são obrigatórios.</p>
+
+```
+[POST] http://localhost:2000/user/create
+```
+```
+[JSON]
+{
+	"name":"nome",
+	"password":"********",
+	"email":"******@*******",
+    "photo":"URL"
+}
+```
+
+### Login de usuário
+<p>Após a autenticação será retornado um TOKEN.</p>
+
+```
+[POST] http://localhost:2000/user/login
+```
+```
+[JSON]
+{
+	"name":"nome",
+	"password":"********"
+}
+```
+
+### Buscar usuário pelo nome 
+<p>Substitua o campo "{nome}" pelo nome do usuário que deseja buscar.</p>
+
+```
+.PROTECTED
+[GET] http://localhost:2000/user/name/{nome}
+```
+
+### Buscar usuário pelo id
+<p>Substitua o campo "{id}" pelo id do usuário que deseja buscar.</p>
+
+```
+.PROTECTED
+[GET] http://localhost:2000/user/id/{id}
+```
+
+### Atualização de usuário
+<p>Todos os campos são obrigatórios.</p>
+
+```
+.PROTECTED
+[PUT] http://localhost:2000/user/update
+```
+```
+[JSON]
+{
+	"password":"********",
+	"email":"******@*******",
+    "photo":"URL"
+}
 ```
