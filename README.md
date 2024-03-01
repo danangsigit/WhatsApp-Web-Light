@@ -15,9 +15,6 @@ contact (id_contact PK, user_contact FK, my_contact FK);
 msg (id_msg PK, text, date_time, from_user FK, to_contact FK);
 ```
 
-### Diagrama de tabelas
-<img src="./imgREADME/dt.png" width="500px">
-
 ### Código SQL para a criação das tabelas no PostgreSQL
 
 ```
@@ -51,9 +48,24 @@ CREATE TABLE msg (
 );
 ```
 
+### Diagrama de tabelas
+<img src="./imgREADME/dt.png" width="500px">
+
+## Requisitos do sistema
+ - Java17
+ - Maven
+ - PostgreSQL
+ - Spring Boot
+    - Spring Data JPA
+    - Spring Web
+    - PostgreSQL Driver
+    - Validation
+    - Spring Security
+    - JWT
+
 ## Endpoints da API
 <p>Todos os endpoints que tiverem com anotação ".PROTECTED" precisarão da utilização do TOKEN para o acesso.</p>
-<p>O TOKEN é gerado após o login do usuário.</p>
+<p>O TOKEN é gerado após o login do usuário e o tempo de expiração é de 2 horas.</p>
 
 **/user**
 ### Criar usuário

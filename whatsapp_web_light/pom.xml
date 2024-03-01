@@ -8,7 +8,7 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.back_end</groupId>
+	<groupId>com.api</groupId>
 	<artifactId>whatsapp_web_light</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>whatsapp_web_light</name>
