@@ -69,13 +69,13 @@ CREATE TABLE msg (
 
 **/user**
 ### Criar usuário
-<p>Os campos (name, password e email) são obrigatórios.</p>
-
 ```
 [POST] http://localhost:2000/user/create
 ```
+**JSON**
+<p>Os campos (name, password e email) são obrigatórios.</p>
+
 ```
-[JSON]
 {
 	"name":"nome",
 	"password":"********",
@@ -90,8 +90,8 @@ CREATE TABLE msg (
 ```
 [POST] http://localhost:2000/user/login
 ```
+**JSON**
 ```
-[JSON]
 {
 	"name":"nome",
 	"password":"********"
@@ -115,14 +115,14 @@ CREATE TABLE msg (
 ```
 
 ### Atualização de usuário
-<p>Todos os campos são obrigatórios.</p>
-
 ```
 .PROTECTED
 [PUT] http://localhost:2000/user/update
 ```
+**JSON**
+<p>Todos os campos são obrigatórios.</p>
+
 ```
-[JSON]
 {
 	"password":"********",
 	"email":"******@*******",
