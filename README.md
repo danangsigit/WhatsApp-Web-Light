@@ -77,9 +77,9 @@ CREATE TABLE msg (
 
 ```
 {
-	"name":"nome",
-	"password":"********",
-	"email":"******@*******",
+    "name":"nome",
+    "password":"********",
+    "email":"******@*******",
     "photo":"URL"
 }
 ```
@@ -93,8 +93,8 @@ CREATE TABLE msg (
 **JSON**
 ```
 {
-	"name":"nome",
-	"password":"********"
+    "name":"nome",
+    "password":"********"
 }
 ```
 
@@ -124,8 +124,8 @@ CREATE TABLE msg (
 
 ```
 {
-	"password":"********",
-	"email":"******@*******",
+    "password":"********",
+    "email":"******@*******",
     "photo":"URL"
 }
 ```
