@@ -3,6 +3,9 @@
 <p>O WhatsApp Web Light é uma versão web e simplificada do WhatsApp.</p>
 <p>Este repositório disponibiliza os endpoints da aplicação e é responsável pela modelagem e os acessos ao banco de dados do sistema.</p>
 
+## Diagrama de arquitetura do sistema
+<img src="./imgREADME/diagrama.jpg" width="500px">
+
 ## Modelagem do Banco de Dados
 ### Modelo ER
 <img src="./imgREADME/mer.png" width="500px">
