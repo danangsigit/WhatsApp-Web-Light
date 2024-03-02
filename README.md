@@ -1,4 +1,4 @@
-# REST API - WhatsApp Web Light
+# REST API - WhatsApp Web Light <img src="./imgREADME/logo.png" width="30px">
 
 <p>O WhatsApp Web Light é uma versão web e simplificada do WhatsApp.</p>
 <p>Este repositório disponibiliza os endpoints da aplicação e é responsável pela modelagem e os acessos ao banco de dados do sistema.</p>
@@ -106,7 +106,7 @@ CREATE TABLE msg (
 
 ```
 .PROTECTED
-[GET] http://localhost:2000/user/name/{nome}
+[GET] http://localhost:2000/user/{nome}
 ```
 
 ### Buscar usuário pelo id
@@ -114,7 +114,7 @@ CREATE TABLE msg (
 
 ```
 .PROTECTED
-[GET] http://localhost:2000/user/id/{id}
+[GET] http://localhost:2000/user/{id}
 ```
 
 ### Atualização de usuário
