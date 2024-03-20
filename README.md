@@ -22,7 +22,7 @@ msg (id_msg PK, text, date_time, from_user FK, to_contact FK);
 
 ```
 CREATE TABLE users (
-    id_user BIGINT,
+    id_user BIGSERIAL,
     name VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE contact (
-    id_contact BIGINT,
+    id_contact BIGSERIAL,
     user_contact int NOT NULL,
     my_contact int NOT NULL,
     PRIMARY KEY(id_contact),
@@ -40,7 +40,7 @@ CREATE TABLE contact (
 );
 
 CREATE TABLE msg (
-    id_msg BIGINT,
+    id_msg BIGSERIAL,
     text TEXT NOT NULL,
     date_time TIMESTAMP NOT NULL,
     from_user INT NOT NULL,
